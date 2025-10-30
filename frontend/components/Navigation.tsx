@@ -12,7 +12,7 @@ const Navigation = () => {
               <Image src="/ufc_logo.png" alt="Logo" width={150} height={80}></Image>
             </Link>
           </li>
-          <li className="text-black lg:mr-10">
+          <li className="text-black lg:mr-10 mr-2.5">
             <Link href="/fighter">Fighter</Link>
           </li>
           <li className="text-black">
