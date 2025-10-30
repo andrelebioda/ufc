@@ -9,7 +9,7 @@ const Navigation = () => {
         <ul className="flex items-center">
           <li className="lg:mr-25 mr-10">
             <Link href="/">
-              <Image src="/ufc_logo.png" alt="Logo" width={150} height={80}></Image>
+              <Image className="w-auto" src="/ufc_logo.png" alt="Logo" width={0} height={50}></Image>
             </Link>
           </li>
           <li className="text-black lg:mr-10 mr-2.5">
