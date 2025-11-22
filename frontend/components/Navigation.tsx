@@ -1,0 +1,26 @@
+import Image from "next/image";
+import Link from "next/link";
+
+const Navigation = () => {
+  return (
+    <nav className="bg-white">
+      <div className="p-2 w-full lg:w-7xl m-auto">
+        <ul className="flex items-center">
+          <li className="lg:mr-25 mr-10">
+            <Link href="/">
+              <Image className="w-20 lg:w-30" src="/ufc_logo.png" alt="Logo" width={2000} height={680}></Image>
+            </Link>
+          </li>
+          <li className="text-black lg:mr-10 mr-2.5">
+            <Link href="/fighter">Fighter</Link>
+          </li>
+          <li className="text-black">
+            <Link href="/fights">Fights</Link>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  );
+};
+
+export default Navigation;
