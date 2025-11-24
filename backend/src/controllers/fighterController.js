@@ -19,3 +19,12 @@ export const createFighter = async (req, res) => {
     }
 }
 
+export const getFighterByClass = async (req, res) => {
+    try {
+        const weight = req.params.weight;
+        const fighters = await fighter.find({ weightClass: weight });
+        res.status(200).json(fighters);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+}
