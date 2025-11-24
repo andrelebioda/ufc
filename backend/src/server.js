@@ -12,11 +12,9 @@ app.use(express.json());
 // MongoDB Verbindung
 mongoose
   .connect(process.env.MONGO_URL)
-  .then(() => console.log("MongoDB connected!"))
+  .then(() => app.listen(process.env.PORT, () => {
+    console.log(`Server läuft auf Port ${process.env.PORT}`);
+  }))
   .catch((err) => console.error("Fehler bei MongoDB:", err));
 
 app.use("/fighters", userRoutes);
-
-app.listen(process.env.PORT, () => {
-  console.log(`Server läuft auf Port ${process.env.PORT}`);
-});
