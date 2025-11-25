@@ -1,10 +1,11 @@
 import express from "express";
-import { getAllFighter, createFighter, getFighterByClass } from "../controllers/fighterController.js";
+import { getAllFighter, createFighter, getFighterByClass, getFighterById } from "../controllers/fighterController.js";
 
 const router = express.Router();
 
 router.post("/post/newFighter", createFighter);
 router.get("/get/allFighter", getAllFighter);
-router.get("/get/fighterByClass/:weight", getFighterByClass);
+router.get("/get/fighterByClass/:weightClass", getFighterByClass);
+router.get("/get/fighterBy/:id", getFighterById);
 
 export default router;
