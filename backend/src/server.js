@@ -5,6 +5,7 @@ import userRoutes from "./routes/fighterRoutes.js";
 
 dotenv.config();
 
+const PORT = process.env.PORT || 5000;
 const app = express();
 
 app.use(express.json());
@@ -12,9 +13,11 @@ app.use(express.json());
 // MongoDB Verbindung
 mongoose
   .connect(process.env.MONGO_URL)
-  .then(() => app.listen(process.env.PORT, () => {
-    console.log(`Server läuft auf Port ${process.env.PORT}`);
-  }))
+  .then(() =>
+    app.listen(PORT, () => {
+      console.log(`Server läuft auf Port ${PORT}`);
+    })
+  )
   .catch((err) => console.error("Fehler bei MongoDB:", err));
 
 app.use("/fighters", userRoutes);
