@@ -16,7 +16,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Navigation></Navigation>
-        <main className="p-2 w-full xl:w-7xl mx-auto my-4">{children}</main>
+        <main className="p-2 w-full xl:w-7xl mx-auto mt-18 mb-4">{children}</main>
       </body>
     </html>
   );

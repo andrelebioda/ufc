@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Navigation = () => {
   return (
-    <nav className="bg-[#c72828]">
+    <nav className="bg-[#c72828] fixed top-0 left-0 w-full z-50 shadow-md">
       <div className="p-2 w-full xl:w-7xl m-auto">
         <ul className="flex items-center">
           <li className="lg:mr-25 mr-10">
